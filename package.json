@@ -1,0 +1,14 @@
+{
+  "name": "credit-pomosh",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Помощь в получении кредита в банках России",
+  "scripts": {
+    "start": "concurrently -n server,client -c teal,cyan \"npm run start --prefix server\" \"npm run start --prefix client\"",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
